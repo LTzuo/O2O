@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">O2O</string>
+
+    <string name="menu_main">首页</string>
+    <string name="menu_classify">分类</string>
+    <string name="menu_collage">拼团</string>
+    <string name="menu_shop">购物车</string>
+    <string name="menu_mine">我的</string>
+
+</resources>
