@@ -12,7 +12,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.ltz.o2o.R;
 import com.trello.rxlifecycle.components.support.RxFragment;
 import butterknife.ButterKnife;
@@ -21,6 +20,7 @@ import butterknife.ButterKnife;
  * Fragment基类
  */
 public abstract class RxLazyFragment extends RxFragment {
+
     private View parentView;
     private FragmentActivity activity;
     // 标志位 标志已经初始化完成。
@@ -164,6 +164,12 @@ public abstract class RxLazyFragment extends RxFragment {
      * 设置数据显示
      */
     protected void finishTask() {
+    }
+
+    /**
+     * 初始化广告
+     */
+    protected void initBanner(){
     }
 
     @SuppressWarnings("unchecked")

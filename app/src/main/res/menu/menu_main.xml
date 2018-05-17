@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/item_main"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/menu_main"
         android:title="@string/menu_main" />
     <item
         android:id="@+id/item_classify"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/menu_classify"
         android:title="@string/menu_classify" />
     <item
         android:id="@+id/item_collage"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/menu_collage"
         android:title="@string/menu_collage" />
     <item
         android:id="@+id/item_shop"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/menu_shop"
         android:title="@string/menu_shop" />
     <item
         android:id="@+id/item_mine"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/menu_mine"
         android:title="@string/menu_mine" />
 
 
