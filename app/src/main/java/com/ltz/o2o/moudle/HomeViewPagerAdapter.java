@@ -1,4 +1,4 @@
-package com.ltz.o2o.moudle.main;
+package com.ltz.o2o.moudle;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

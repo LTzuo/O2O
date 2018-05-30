@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--地址管理Item-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/_14dp"
+            android:textColor="@color/black"
+            android:text="林天佐"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14dp"
+            android:textColor="@color/black"
+            android:text="139****5871"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13dp"
+        android:textColor="@color/textcolor_grary"
+        android:layout_marginTop="10dp"
+        android:text="吉林省长春市朝阳区前进西街与繁荣路交汇文庭雅苑7栋慧万家"/>
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/linecolor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="默认地址"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/icon_bj"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="5dp"
+            android:text="编辑"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/icon_shanchu"
+            android:text="删除"/>
+
+    </LinearLayout>
+
+</LinearLayout>

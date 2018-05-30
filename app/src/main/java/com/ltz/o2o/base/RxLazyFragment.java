@@ -166,12 +166,6 @@ public abstract class RxLazyFragment extends RxFragment {
     protected void finishTask() {
     }
 
-    /**
-     * 初始化广告
-     */
-    protected void initBanner(){
-    }
-
     @SuppressWarnings("unchecked")
     public <T extends View> T $(int id) {
         return (T) parentView.findViewById(id);

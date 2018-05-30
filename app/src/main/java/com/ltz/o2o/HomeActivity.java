@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.MenuItem;
 import com.ltz.o2o.base.RxBaseActivity;
-import com.ltz.o2o.moudle.main.HomeViewPagerAdapter;
+import com.ltz.o2o.moudle.classification.ClassificationFragment;
+import com.ltz.o2o.moudle.HomeViewPagerAdapter;
+import com.ltz.o2o.moudle.collage.CollageFragment;
 import com.ltz.o2o.moudle.main.MainFragment;
+import com.ltz.o2o.moudle.mine.MineFragment;
+import com.ltz.o2o.moudle.shopping_cart.Shop_CartFragment;
 import com.ltz.o2o.utils.SnackbarUtil;
 import com.ltz.o2o.widget.TabbarHelper.BottomNavigationViewHelper;
 import com.ltz.o2o.widget.TabbarHelper.NoScrollViewPager;
@@ -89,10 +93,10 @@ public class HomeActivity extends RxBaseActivity {
         HomeViewPagerAdapter adapter = new HomeViewPagerAdapter(getSupportFragmentManager());
         viewPager.setOffscreenPageLimit(4);
         adapter.addFragment(MainFragment.newInstance());
-        adapter.addFragment(MainFragment.newInstance());
-        adapter.addFragment(MainFragment.newInstance());
-        adapter.addFragment(MainFragment.newInstance());
-        adapter.addFragment(MainFragment.newInstance());
+        adapter.addFragment(ClassificationFragment.newInstance());
+        adapter.addFragment(CollageFragment.newInstance());
+        adapter.addFragment(Shop_CartFragment.newInstance());
+        adapter.addFragment(MineFragment.newInstance());
         viewPager.setAdapter(adapter);
     }
 

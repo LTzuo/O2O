@@ -6,6 +6,18 @@
 
     <color name="white">#FFFFFF</color><!--白色-->
 
+    <color name="black">#000000</color>
+
     <color name="tab_checked">#FD6C00</color>
     <color name="tab_unchecked">#999999</color>
+
+    <color name="textcolor">#2C2C2C</color>
+    <color name="textcolor1">#ff9001</color>
+    <color name="textcolor_black">#333333</color>
+    <color name="textcolor_grary">#999999</color>
+    <color name="linecolor">#dfdfdf</color>
+
+    <color name="color_grary">#BFBFBF</color>
+
+    <color name="background">#F5F5F5</color>
 </resources>
