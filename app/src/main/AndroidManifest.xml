@@ -21,13 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <!-- 分类-品牌榜 -->
         <activity android:name=".moudle.classification.rightRv.Ranking.brand.BrandRankActivity" />
         <!-- 我的-地址管理 -->
         <activity android:name=".moudle.mine.address_management.AddressManagementActivity" />
-        <!--我的-我的评价-->
-        <activity android:name=".moudle.mine.evaluate.MyEvaluateActivity"/>
+        <!-- 我的-我的评价 -->
+        <activity android:name=".moudle.mine.evaluate.MyEvaluateActivity" />
+        <!-- 拼团商城-多人团 -->
+        <activity android:name=".moudle.collage.function.MultiplayerCollageActivity" />
+        <activity android:name=".moudle.collage.content.CollageCommodityDetilsActivity"></activity>
     </application>
 
 </manifest>
