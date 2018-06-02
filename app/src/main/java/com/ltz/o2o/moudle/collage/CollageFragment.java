@@ -6,7 +6,9 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxLazyFragment;
+import com.ltz.o2o.moudle.collage.content.CollageCommodityDetilsActivity;
 import com.ltz.o2o.moudle.collage.content.CollageContentRecyclerAdapter;
+import com.ltz.o2o.utils.IntentUtils;
 import com.ltz.o2o.utils.ToastUtil;
 import java.util.ArrayList;
 import java.util.List;
@@ -56,6 +58,6 @@ public class CollageFragment extends RxLazyFragment implements CollageContentRec
 
     @Override
     public void OnKtBtnClick(int index) {
-        ToastUtil.ShortToast("开团~~" + index);
+        IntentUtils.Goto(getActivity(),CollageCommodityDetilsActivity.class);
     }
 }

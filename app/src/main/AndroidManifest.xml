@@ -29,7 +29,8 @@
         <activity android:name=".moudle.mine.evaluate.MyEvaluateActivity" />
         <!-- 拼团商城-多人团 -->
         <activity android:name=".moudle.collage.function.MultiplayerCollageActivity" />
-        <activity android:name=".moudle.collage.content.CollageCommodityDetilsActivity"></activity>
+        <!--拼团商城-商品详情-->
+        <activity android:name=".moudle.collage.content.CollageCommodityDetilsActivity"/>
     </application>
 
 </manifest>

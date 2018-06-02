@@ -30,8 +30,12 @@
         <item>医药</item>
         <item>洗护</item>
         <item>乐器</item>
+    </string-array>
 
-
+    <string-array name="collage_commoditydetils_arrays">
+        <item>商品</item>
+        <item>详情</item>
+        <item>评价</item>
     </string-array>
 
 </resources>
