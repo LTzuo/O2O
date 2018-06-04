@@ -7,6 +7,8 @@ import com.flyco.tablayout.SlidingTabLayout;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
 import com.ltz.o2o.utils.ToastUtil;
+import com.ltz.o2o.widget.HorizonVerticalViewPager.HorizonVerticalViewPager;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 
@@ -16,7 +18,7 @@ import butterknife.OnClick;
 public class CollageCommodityDetilsActivity extends RxBaseActivity {
 
     @Bind(R.id.view_pager)
-    ViewPager mViewPager;
+    HorizonVerticalViewPager mViewPager;
     @Bind(R.id.sliding_tabs)
     SlidingTabLayout mSlidingTab;
 

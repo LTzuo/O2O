@@ -100,6 +100,7 @@ public class HorizonVerticalViewPager extends LtzViewPager {
         }
     }
 
+
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         if (isVertical) {

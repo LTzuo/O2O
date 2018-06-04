@@ -13,7 +13,8 @@
 
         <include layout="@layout/toolbar_commodity"/>
 
-        <com.ltz.o2o.widget.HorizonVerticalViewPager.HorizonVerticalViewPager
+
+       <com.ltz.o2o.widget.HorizonVerticalViewPager.HorizonVerticalViewPager
             android:id="@+id/view_pager"
             app:isVertical="true"
             android:layout_width="match_parent"
