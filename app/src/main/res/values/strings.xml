@@ -38,4 +38,18 @@
         <item>评价</item>
     </string-array>
 
+    <string-array name="coupon_arrays">
+        <item>未使用</item>
+        <item>已使用</item>
+        <item>已失效</item>
+    </string-array>
+
+    <string-array name="mineorder_arrays">
+        <item>全部</item>
+        <item>待付款</item>
+        <item>待发货</item>
+        <item>待收货</item>
+        <item>待评价</item>
+    </string-array>
+
 </resources>

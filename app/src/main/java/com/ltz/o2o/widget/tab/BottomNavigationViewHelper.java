@@ -1,4 +1,4 @@
-package com.ltz.o2o.widget.TabbarHelper;
+package com.ltz.o2o.widget.tab;
 
 import android.support.design.internal.BottomNavigationItemView;
 import android.support.design.internal.BottomNavigationMenuView;

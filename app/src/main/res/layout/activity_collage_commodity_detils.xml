@@ -1,30 +1,392 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.ltz.o2o.moudle.collage.content.CollageCommodityDetilsActivity">
 
-    <android.support.design.widget.CoordinatorLayout
+    <com.ltz.o2o.widget.scrollview.IdeaScrollView
+        android:id="@+id/ideaScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
-        <include layout="@layout/toolbar_commodity"/>
-
-
-       <com.ltz.o2o.widget.HorizonVerticalViewPager.HorizonVerticalViewPager
-            android:id="@+id/view_pager"
-            app:isVertical="true"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:overScrollMode="never"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            android:orientation="vertical">
 
-    </android.support.design.widget.CoordinatorLayout>
+            <LinearLayout
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <include layout="@layout/include_bottom_collagecommodiy_detils"/>
+                <com.youth.banner.Banner
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp" />
 
-</RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_gradient"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="￥149"
+                        android:textColor="@color/white" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_h"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="距拼团结束还剩:"
+                            android:textColor="#be2d00"
+                            android:textSize="@dimen/_12dp" />
+
+                        <TextView
+                            android:id="@+id/tv_countdown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_h"
+                            android:gravity="center"
+                            android:text="00天00:00:00"
+                            android:textColor="@color/white" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:text="免税包邮| 澳洲Swisse 卵磷脂胶囊血管清道夫调节 三高 Swisse 卵磷脂胶囊血管清道夫 150粒" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="每人限购一件"
+                        android:textColor="@color/red_600"
+                        android:textSize="@dimen/_12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="累计已拼666件-2人团"
+                        android:textColor="@color/textcolor_grary"
+                        android:textSize="@dimen/_12dp" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="领券:"
+                        android:textColor="@color/textcolor_grary"
+                        android:textSize="@dimen/_12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/more"
+                        android:text="满199减10优惠卷；满299减30优惠卷"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12dp" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="规格:"
+                        android:textColor="@color/textcolor_grary"
+                        android:textSize="@dimen/_12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/more"
+                        android:text="选择口味 数量 "
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12dp" />
+                </LinearLayout>
+
+                <include layout="@layout/include_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="快递:"
+                        android:textColor="@color/textcolor_grary"
+                        android:textSize="@dimen/_12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/more"
+                        android:text="吉林省内免邮"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+                        <!--已开团列表-->
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/wo_icon_header" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="林天佐的团"
+                            android:textColor="@color/textcolor_grary"
+                            android:textSize="@dimen/_12dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="还差一人成团"
+                                android:textColor="@color/red_600"
+                                android:textSize="@dimen/_11dp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="剩余13:25:59"
+                                android:textColor="@color/textcolor_grary"
+                                android:textSize="@dimen/_11dp" />
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/shape_btnbg_qbt"
+                            android:textSize="@dimen/_12dp"
+                            android:gravity="center_vertical"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="2dp"
+                            android:text="参团"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <include layout="@layout/include_line"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/_12dp"
+                        android:textColor="@color/tab_checked"
+                        android:padding="10dp"
+                        android:text="查看更多 >"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:layout_weight="1"
+                            android:text="拼团玩法"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/tab_checked"
+                            android:text="规则说明"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textcolor_grary"
+                        android:padding="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:textSize="@dimen/_12dp"
+                        android:text="支付开团，并邀请小伙伴参与到要求人数，时限内人数不足则自动退款。"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--宝贝评价-->
+            <LinearLayout
+                android:id="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:text="用户评价(1221)"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tab_checked"
+                        android:text="查看更多 >"/>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+            <!--详情-->
+            <LinearLayout
+                android:id="@+id/three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="------详情------" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_shangpin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_shangpin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_shangpin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_shangpin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_shangpin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_shangpin" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/test_shangpin" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="70dp"
+                android:layout_marginTop="30dp"
+                android:text="---已经到底了---" />
+        </LinearLayout>
+    </com.ltz.o2o.widget.scrollview.IdeaScrollView>
+
+    <include layout="@layout/include_header_collage_commoditydetilis" />
+
+    <include layout="@layout/include_bottom_collagecommodiy_detils" />
+
+</FrameLayout>

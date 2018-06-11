@@ -54,5 +54,12 @@ dependencies {
     //适配器
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.1.3'
     compile 'com.flyco.tablayout:FlycoTabLayout_Lib:2.0.0@aar'
+    //自定义优惠券
+    compile 'com.github.dongjunkun:CouponView:1.0.4'
+    dependencies {
+        compile ('com.github.niorgai:StatusBarCompat:2.1.4', {
+            exclude group: 'com.android.support'
+        })
+    }
 
 }

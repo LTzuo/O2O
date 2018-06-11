@@ -1,4 +1,4 @@
-package com.ltz.o2o.widget;
+package com.ltz.o2o.widget.scrollview;
 
 import android.content.Context;
 import android.util.AttributeSet;

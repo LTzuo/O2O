@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <yyydjk.com.library.CouponView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/couponView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:cv_dash_line_color="@android:color/white"
+        app:cv_dash_line_gap="5dp"
+        app:cv_dash_line_height="2dp"
+        app:cv_dash_line_length="10dp"
+        app:cv_is_dash_line_bottom="false"
+        app:cv_is_dash_line_left="false"
+        app:cv_is_dash_line_right="false"
+        app:cv_is_dash_line_top="false"
+        app:cv_is_semicircle_bottom="false"
+        app:cv_is_semicircle_left="true"
+        app:cv_is_semicircle_right="true"
+        app:cv_is_semicircle_top="false"
+        app:cv_semicircle_color="@color/background"
+        app:cv_semicircle_gap="8dp"
+        app:cv_semicircle_radius="4dp">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="￥11"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="无门槛优惠券"
+                        android:textSize="@dimen/_15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="新店有礼88元"
+                        android:textSize="@dimen/_14dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="●促销商品、幼儿奶粉、纸尿裤不可用"
+                        android:textSize="@dimen/_10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="●2018-04-26至2018-05-26"
+                        android:textSize="@dimen/_10dp" />
+
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+    </yyydjk.com.library.CouponView>
+</LinearLayout>

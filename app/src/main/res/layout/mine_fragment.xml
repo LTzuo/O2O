@@ -15,6 +15,7 @@
         android:paddingRight="10dp">
 
         <ImageView
+            android:id="@+id/img_seeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/wo_icon_seeting" />
@@ -80,6 +81,7 @@
                 android:padding="5dp">
 
                 <TextView
+                    android:id="@+id/tv_collectionfolder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
@@ -119,6 +121,7 @@
                     android:textSize="@dimen/_14dp" />
 
                 <TextView
+                    android:id="@+id/tv_mineorder"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -149,11 +152,12 @@
                     android:weightSum="5">
 
                     <TextView
+                        android:id="@+id/order_dfk"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:drawablePadding="5dp"
-                        android:drawableTop="@drawable/icon_dfk"
+                        android:drawableTop="@drawable/wd_icon_dfk"
                         android:gravity="center"
                         android:text="待付款"
                         android:textColor="@color/textcolor_black"
@@ -161,11 +165,12 @@
 
 
                     <TextView
+                        android:id="@+id/order_dfh"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:drawablePadding="5dp"
-                        android:drawableTop="@drawable/icon_dfh"
+                        android:drawableTop="@drawable/wd_icon_dfh"
                         android:gravity="center"
                         android:text="待发货"
                         android:textColor="@color/textcolor_black"
@@ -177,7 +182,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:drawablePadding="5dp"
-                        android:drawableTop="@drawable/icon_dsh"
+                        android:drawableTop="@drawable/wd_icon_dsh"
                         android:gravity="center"
                         android:text="待收货"
                         android:textColor="@color/textcolor_black"
@@ -188,7 +193,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:drawablePadding="5dp"
-                        android:drawableTop="@drawable/icon_dpj"
+                        android:drawableTop="@drawable/wd_icon_dpj"
                         android:gravity="center"
                         android:text="待评价"
                         android:textColor="@color/textcolor_black"
@@ -199,7 +204,7 @@
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:drawablePadding="5dp"
-                        android:drawableTop="@drawable/icon_tk"
+                        android:drawableTop="@drawable/wd_icon_tk"
                         android:gravity="center"
                         android:text="退款/售后"
                         android:textColor="@color/textcolor_black"

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.ltz.o2o.widget.LtzScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.ltz.o2o.widget.scrollview.LtzScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="@color/background"
     android:fillViewport="true">
 
     <LinearLayout
@@ -10,139 +10,84 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <TextView
+        <com.youth.banner.Banner
+            android:id="@+id/banner"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
+            android:layout_height="160dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_gradient"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="￥149"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="距拼团结束还剩:"
+                    android:textColor="#be2d00"
+                    android:textSize="@dimen/_12dp" />
+
+                <TextView
+                    android:id="@+id/tv_countdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_h"
+                    android:gravity="center"
+                    android:text="00天00:00:00"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:text="免税包邮| 澳洲Swisse 卵磷脂胶囊血管清道夫调节 三高 Swisse 卵磷脂胶囊血管清道夫 150粒" />
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="每人限购一件"
+                android:textColor="@color/red_600"
+                android:textSize="@dimen/_12dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:gravity="center"
-            android:text="商品" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text="累计已拼666件-2人团"
+                android:textColor="@color/textcolor_grary"
+                android:textSize="@dimen/_12dp" />
+        </LinearLayout>
 
 
     </LinearLayout>
 
-</com.ltz.o2o.widget.LtzScrollView>
+</com.ltz.o2o.widget.scrollview.LtzScrollView>

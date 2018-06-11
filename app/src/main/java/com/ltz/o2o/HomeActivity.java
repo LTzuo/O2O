@@ -14,8 +14,8 @@ import com.ltz.o2o.moudle.main.MainFragment;
 import com.ltz.o2o.moudle.mine.MineFragment;
 import com.ltz.o2o.moudle.shopping_cart.Shop_CartFragment;
 import com.ltz.o2o.utils.SnackbarUtil;
-import com.ltz.o2o.widget.TabbarHelper.BottomNavigationViewHelper;
-import com.ltz.o2o.widget.TabbarHelper.NoScrollViewPager;
+import com.ltz.o2o.widget.tab.BottomNavigationViewHelper;
+import com.ltz.o2o.widget.tab.NoScrollViewPager;
 import java.util.Timer;
 import java.util.TimerTask;
 

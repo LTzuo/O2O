@@ -1,4 +1,4 @@
-package com.ltz.o2o.widget.HorizonVerticalViewPager;
+package com.ltz.o2o.widget.viewpager;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -23,14 +23,26 @@
         </activity>
         <!-- 分类-品牌榜 -->
         <activity android:name=".moudle.classification.rightRv.Ranking.brand.BrandRankActivity" />
+        /******************************************************/
+        <!-- 拼团商城-多人团 -->
+        <activity android:name=".moudle.collage.function.MultiplayerCollageActivity" />
+        <!-- 拼团商城-商品详情 -->
+        <activity android:name=".moudle.collage.content.CollageCommodityDetilsActivity" />
+        /******************************************************/
         <!-- 我的-地址管理 -->
         <activity android:name=".moudle.mine.address_management.AddressManagementActivity" />
         <!-- 我的-我的评价 -->
         <activity android:name=".moudle.mine.evaluate.MyEvaluateActivity" />
-        <!-- 拼团商城-多人团 -->
-        <activity android:name=".moudle.collage.function.MultiplayerCollageActivity" />
-        <!--拼团商城-商品详情-->
-        <activity android:name=".moudle.collage.content.CollageCommodityDetilsActivity"/>
+        <!-- 我的-我的拼团 -->
+        <activity android:name=".moudle.mine.minecollage.MineCollageActivity" />
+        <!-- 我的-优惠券 -->
+        <activity android:name=".moudle.mine.coupon.CouponActivity" />
+        <!-- 我的-收藏夹 -->
+        <activity android:name=".moudle.mine.collectionfolder.CollectionFolderActivity" />
+        <!-- 我的-我的订单 -->
+        <activity android:name=".moudle.mine.mineorder.MineOrderActivity" />
+        <!--我的-设置-->
+        <activity android:name=".moudle.mine.seeting.SeetingActivity"/>
     </application>
 
 </manifest>

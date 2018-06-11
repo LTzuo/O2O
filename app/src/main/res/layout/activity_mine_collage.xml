@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ltz.o2o.moudle.mine.minecollage.MineCollageActivity">
+
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#edf3f9"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/img_header"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/wo_icon_header"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_header"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="林天佐"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="社会我皮卡丘"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/_15dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:text="我的拼团订单"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13dp"
+                android:textColor="@color/textcolor_grary"
+                android:text="查看全部订单 >"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/linecolor"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:weightSum="4">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/wd_icon_ptz"
+                    android:padding="10dp"
+                    android:drawablePadding="5dp"
+                    android:text="拼团中"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/wd_icon_dfk"
+                    android:padding="10dp"
+                    android:drawablePadding="5dp"
+                    android:text="待付款"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/wd_icon_dfh"
+                    android:padding="10dp"
+                    android:drawablePadding="5dp"
+                    android:text="待发货"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:drawableTop="@drawable/wd_icon_dsh"
+                    android:padding="10dp"
+                    android:drawablePadding="5dp"
+                    android:text="待收货"
+                    />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:textColor="#666666"
+        android:text="1、拼团有效期 拼团有效期是自开团时刻起的24小时内，如果距离商品失败失效时间小于24小时，则以商品的结束时间为准。 \n2、拼团失败 超过成团有效期24小时，未达成相应参团人数的团，则该团失败。 在团有效期24小时内，商品已提前售罄，若还未拼团成功，则该团失败。 高峰期间，同时支付的人过多，团人数有限制，以接收第三方支付信息时间先后顺序为准，超出该团人数限制的部分用户则会拼团失败。\n 拼团失败的订单，系统会在1-2工作日内处理退款，系统会在1-10个工作日内原路退回原支付账号中，（所使用的现金券会一并退回）。"/>
+
+
+</LinearLayout>

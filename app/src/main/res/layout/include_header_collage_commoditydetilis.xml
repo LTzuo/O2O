@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/headerParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#00FFFFFF"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:src="@drawable/ic_back_white" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="#00FFFFFF"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="宝贝"
+                android:textColor="#00000000" />
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="评价"
+                android:textColor="#00000000" />
+
+
+            <RadioButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="详情"
+                android:textColor="#00000000" />
+        </RadioGroup>
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_10dp"
+            android:src="@drawable/ptsc_icon_share" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
