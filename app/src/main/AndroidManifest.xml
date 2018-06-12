@@ -41,8 +41,10 @@
         <activity android:name=".moudle.mine.collectionfolder.CollectionFolderActivity" />
         <!-- 我的-我的订单 -->
         <activity android:name=".moudle.mine.mineorder.MineOrderActivity" />
-        <!--我的-设置-->
-        <activity android:name=".moudle.mine.seeting.SeetingActivity"/>
+        <!-- 我的-设置 -->
+        <activity android:name=".moudle.mine.seeting.SeetingActivity" />
+        <!--我的-消息-->
+        <activity android:name=".moudle.mine.message.MessageActivity"/>
     </application>
 
 </manifest>

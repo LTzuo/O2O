@@ -3,10 +3,181 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context="com.ltz.o2o.moudle.mine.seeting.SeetingActivity">
 
-    <include layout="@layout/toolbar"/>
+    <include layout="@layout/toolbar" />
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/wo_icon_header" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:text="点击更换头像"
+                android:textColor="@color/tab_checked"
+                android:textSize="@dimen/_15dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="我的收货地址"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textSize="@dimen/_13dp"
+                android:drawableRight="@drawable/more"
+                android:background="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textSize="@dimen/_13dp"
+                android:drawableRight="@drawable/more"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/linecolor"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="性别"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textSize="@dimen/_13dp"
+                android:drawableRight="@drawable/more"
+                />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="修改手机号码"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="@dimen/_13dp"
+                    android:drawableRight="@drawable/more"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/linecolor"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="设置登录密码"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="@dimen/_13dp"
+                    android:drawableRight="@drawable/more"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="实名认证"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="@dimen/_13dp"
+                    android:drawableRight="@drawable/more"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/linecolor"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="当前版本"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="@dimen/_13dp"
+                    android:drawableRight="@drawable/more"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/linecolor"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="关于我们"
+                    android:textColor="@color/black"
+                    android:padding="10dp"
+                    android:textSize="@dimen/_13dp"
+                    android:drawableRight="@drawable/more"
+                    />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="退出当前登录"
+                android:gravity="center"
+                android:textSize="@dimen/_16dp"
+                android:textColor="@color/white"
+                android:background="@drawable/shape_btnbg_qcdqdl"
+                android:layout_margin="30dp"
+                android:padding="10dp"/>
+
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
 
 
 </RelativeLayout>

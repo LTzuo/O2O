@@ -9,6 +9,7 @@ import com.ltz.o2o.moudle.mine.address_management.AddressManagementActivity;
 import com.ltz.o2o.moudle.mine.collectionfolder.CollectionFolderActivity;
 import com.ltz.o2o.moudle.mine.coupon.CouponActivity;
 import com.ltz.o2o.moudle.mine.evaluate.MyEvaluateActivity;
+import com.ltz.o2o.moudle.mine.message.MessageActivity;
 import com.ltz.o2o.moudle.mine.minecollage.MineCollageActivity;
 import com.ltz.o2o.moudle.mine.mineorder.MineOrderActivity;
 import com.ltz.o2o.moudle.mine.seeting.SeetingActivity;
@@ -23,7 +24,7 @@ public class MineFragment extends RxLazyFragment{
 
     @OnClick({R.id.address_management,R.id.realname_authentication,R.id.my_evaluation,R.id.my_collage
                ,R.id.coupon,R.id.tv_collectionfolder,R.id.tv_mineorder,R.id.order_dfk,R.id.order_dfh,
-                R.id.img_seeting})
+                R.id.img_seeting,R.id.img_message})
 
     public void OnBtnClick(View v){
         if(v.getId() == R.id.address_management){
@@ -61,9 +62,10 @@ public class MineFragment extends RxLazyFragment{
             startActivity(intent);
         }else if(v.getId() == R.id.img_seeting){
             IntentUtils.Goto(getActivity(),SeetingActivity.class);
+        }else if(v.getId() == R.id.img_message){
+            IntentUtils.Goto(getActivity(),MessageActivity.class);
         }
     }
-
 
     public static MineFragment newInstance() {
         return new MineFragment();
