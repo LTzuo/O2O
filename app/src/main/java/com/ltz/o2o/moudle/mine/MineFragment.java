@@ -12,6 +12,7 @@ import com.ltz.o2o.moudle.mine.evaluate.MyEvaluateActivity;
 import com.ltz.o2o.moudle.mine.message.MessageActivity;
 import com.ltz.o2o.moudle.mine.minecollage.MineCollageActivity;
 import com.ltz.o2o.moudle.mine.mineorder.MineOrderActivity;
+import com.ltz.o2o.moudle.mine.realname_authentication.RealnameAuthenticationActivity;
 import com.ltz.o2o.moudle.mine.seeting.SeetingActivity;
 import com.ltz.o2o.utils.IntentUtils;
 import com.ltz.o2o.utils.ToastUtil;
@@ -32,7 +33,7 @@ public class MineFragment extends RxLazyFragment{
             IntentUtils.Goto(getActivity(), AddressManagementActivity.class);
         }else if(v.getId() == R.id.realname_authentication){
             //实名认证
-            ToastUtil.ShortToast("实名认证");
+            IntentUtils.Goto(getActivity(), RealnameAuthenticationActivity.class);
         }else if(v.getId() == R.id.my_evaluation){
             //我的评价
             IntentUtils.Goto(getActivity(), MyEvaluateActivity.class);

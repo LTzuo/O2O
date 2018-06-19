@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="com.ltz.o2o.moudle.mine.realname_authentication.RealnameAuthenticationActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/red_a700" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="真实姓名:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入真实姓名"
+                    android:textColorHint="@color/textcolor_grary"
+                    android:textSize="@dimen/_15dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.5dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*"
+                    android:textColor="@color/red_a700" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16dp" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入身份证号"
+                    android:textColorHint="@color/textcolor_grary"
+                    android:textSize="@dimen/_15dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_marginTop="5dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="可选项"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    >
+                      <TableRow
+                          android:layout_width="fill_parent"
+                          android:layout_height="fill_parent"
+                          android:weightSum="2">
+                          <TextView
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:text="身份证正面照"
+                              android:drawablePadding="5dp"
+                              android:gravity="center_horizontal"
+                              android:drawableBottom="@drawable/addpicure"
+                              android:layout_height="wrap_content" />
+                          <TextView
+                              android:layout_width="0dp"
+                              android:layout_weight="1"
+                              android:text="示例照片"
+                              android:drawablePadding="5dp"
+                              android:gravity="center_horizontal"
+                              android:drawableBottom="@drawable/addpicure"
+                              android:layout_height="wrap_content" />
+                      </TableRow>
+
+                </TableLayout>
+
+                <include layout="@layout/include_line"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    >
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:weightSum="2">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="身份证反面照"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_horizontal"
+                            android:drawableBottom="@drawable/addpicure"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="示例照片"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_horizontal"
+                            android:drawableBottom="@drawable/addpicure"
+                            android:layout_height="wrap_content" />
+                    </TableRow>
+
+                </TableLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_btnbg_qcdqdl"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14dp"
+        android:text="提交认证"/>
+
+</RelativeLayout>

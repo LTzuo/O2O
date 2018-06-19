@@ -1,6 +1,7 @@
 package com.ltz.o2o.moudle.mine.evaluate.fragment;
 
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -34,6 +35,7 @@ public class AllEvaluationFragment extends RxLazyFragment{
     public void finishCreateView(Bundle state) {
         mAdapter = new AllEvaluationAdapter(mRecyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL));
         mRecyclerView.setAdapter(mAdapter);
     }
 
