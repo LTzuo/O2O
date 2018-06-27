@@ -3,17 +3,68 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f7f7f7"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/left_rv"
-        android:layout_width="100dp"
-        android:layout_height="match_parent"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/right_rv"
-        android:background="#FFF"
+    <LinearLayout
+        android:id="@+id/layout_toobar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/saoyisao"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btnbg_edit"
+            android:textColor="@color/textcolor_grary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="商品关键词"
+            android:drawableLeft="@drawable/fenlei_icon_search"
+            android:textSize="@dimen/_15dp" />
+
+        <TextView
+            android:id="@+id/tv_bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:text="搜索"
+            android:textColor="@color/textcolor_grary"
+            android:textSize="@dimen/_15dp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/include_line" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/left_rv"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/right_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFF" />
+
+    </LinearLayout>
 
 </LinearLayout>

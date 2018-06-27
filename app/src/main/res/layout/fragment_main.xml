@@ -6,6 +6,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/layout_toobar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/img_saoyisao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/saoyisao"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_btnbg_edit"
+            android:textColor="@color/textcolor_grary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="商品关键词"
+            android:drawableLeft="@drawable/fenlei_icon_search"
+            android:textSize="@dimen/_15dp" />
+
+        <ImageView
+            android:id="@+id/img_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/main_icon_message"/>
+
+    </LinearLayout>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mRecyclerView"
         android:layout_width="match_parent"

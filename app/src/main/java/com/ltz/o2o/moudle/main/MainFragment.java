@@ -3,12 +3,17 @@ package com.ltz.o2o.moudle.main;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxLazyFragment;
 import com.ltz.o2o.moudle.main.content.ContentRecyclerAdapter;
+import com.ltz.o2o.moudle.main.toolbar.SearchActivity;
+import com.ltz.o2o.utils.IntentUtils;
+import com.ltz.o2o.utils.ToastUtil;
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.Bind;
+import butterknife.OnClick;
 
 /**
  * 主页
@@ -16,13 +21,23 @@ import butterknife.Bind;
  */
 public class MainFragment extends RxLazyFragment {
 
-
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
 
     ContentRecyclerAdapter mContentRecyclerAdapter;
 
     public List<String> images = new ArrayList<>();
+
+    @OnClick({R.id.img_saoyisao,R.id.img_message,R.id.tv_search})
+    public void OnBtnClick(View v){
+        if(v.getId() == R.id.img_saoyisao){
+            ToastUtil.ShortToast("扫一扫");
+        }else if(v.getId() == R.id.img_message){
+            ToastUtil.ShortToast("消息");
+        }else if(v.getId() == R.id.tv_search){
+            IntentUtils.Goto(getActivity(), SearchActivity.class);
+        }
+    }
 
     public static MainFragment newInstance() {
         return new MainFragment();

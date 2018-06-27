@@ -249,7 +249,8 @@
                             android:paddingRight="10dp"
                             android:paddingTop="2dp"
                             android:text="参团"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:id="@+id/tv_Join_thegroup" />
                     </LinearLayout>
 
                     <include layout="@layout/include_line"/>

@@ -16,6 +16,8 @@ import android.widget.TextView;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
 import com.ltz.o2o.imageloader.GlideImageLoader;
+import com.ltz.o2o.moudle.collage.content.join_the_group.JointheGroupActivity;
+import com.ltz.o2o.utils.IntentUtils;
 import com.ltz.o2o.utils.ToastUtil;
 import com.ltz.o2o.widget.scrollview.IdeaScrollView;
 import com.ltz.o2o.widget.viewpager.IdeaViewPager;
@@ -46,7 +48,7 @@ public class CollageCommodityDetilsActivity extends RxBaseActivity {
     //拼团商品banner数据
     public List<String> images = new ArrayList<>();
 
-    @OnClick({R.id.img_back,R.id.tv_gotohome,R.id.tv_collection})
+    @OnClick({R.id.img_back,R.id.tv_gotohome,R.id.tv_collection,R.id.tv_Join_thegroup})
     public void OnBtnClick(View v){
         if(v.getId() == R.id.img_back){
             finish();
@@ -54,6 +56,8 @@ public class CollageCommodityDetilsActivity extends RxBaseActivity {
             ToastUtil.ShortToast("去首页");
         }else if(v.getId() == R.id.tv_collection){
             ToastUtil.ShortToast("收藏");
+        }else if(v.getId() == R.id.tv_Join_thegroup){
+            IntentUtils.Goto(this,JointheGroupActivity.class);
         }
     }
 
