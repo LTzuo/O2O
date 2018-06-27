@@ -229,7 +229,6 @@ public class FlowLayout extends ViewGroup {
 //                        }
 //                    }
 //                },400 );
-
                 float x = event.getX();
                 float y = event.getY();
                 Rect rect = new Rect();
