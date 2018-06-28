@@ -1,12 +1,17 @@
 package com.ltz.o2o.moudle.main.content;
 
+import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import com.ltz.o2o.R;
 import com.ltz.o2o.imageloader.GlideImageLoader;
+import com.ltz.o2o.moudle.main.content.global_hot_sale.GlobalHotSaleActivity;
+import com.ltz.o2o.moudle.main.content.latest_goods.LatestGoodsActivity;
+import com.ltz.o2o.utils.IntentUtils;
 import com.ltz.o2o.utils.ToastUtil;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -70,7 +75,28 @@ public class ContentRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 }
             });
             headerHolder.banner.start();
-          //headerHolder.textViewHeader.setText(mDatas.get(position));
+
+            headerHolder.tv_coupon.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    IntentUtils.Goto((Activity) mContext,MainCouponActivity.class);
+                }
+            });
+
+            headerHolder.tv_global_hot_sale.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                  IntentUtils.Goto((Activity) mContext,GlobalHotSaleActivity.class);
+                }
+            });
+
+            headerHolder.tv_latest_goods.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                  IntentUtils.Goto((Activity) mContext,LatestGoodsActivity.class);
+                }
+            });
+
         } else if (holder instanceof ContentFooterHolder) {
             ContentFooterHolder footHolder = (ContentFooterHolder) holder;
            //footHolder.textViewFoot.setText(mDatas.get(position));
@@ -104,6 +130,12 @@ public class ContentRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     class ContentHeaderHolder extends RecyclerView.ViewHolder {
         @Bind(R.id.banner)
         Banner banner;
+        @Bind(R.id.tv_coupon)
+        TextView tv_coupon;
+        @Bind(R.id.tv_global_hot_sale)
+        TextView tv_global_hot_sale;
+        @Bind(R.id.tv_latest_goods)
+        TextView tv_latest_goods;
         public ContentHeaderHolder(View headerView) {
             super(headerView);
             ButterKnife.bind(this,headerView);

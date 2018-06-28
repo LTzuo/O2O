@@ -1,9 +1,13 @@
 package com.ltz.o2o.moudle.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import com.google.zxing.client.android.MNScanManager;
+import com.google.zxing.client.android.model.MNScanConfig;
+import com.google.zxing.client.android.other.MNScanCallback;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxLazyFragment;
 import com.ltz.o2o.moudle.main.content.ContentRecyclerAdapter;
@@ -14,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 import butterknife.Bind;
 import butterknife.OnClick;
-
 /**
  * 主页
  * Created by 1 on 2018/5/16.
@@ -31,7 +34,36 @@ public class MainFragment extends RxLazyFragment {
     @OnClick({R.id.img_saoyisao,R.id.img_message,R.id.tv_search})
     public void OnBtnClick(View v){
         if(v.getId() == R.id.img_saoyisao){
-            ToastUtil.ShortToast("扫一扫");
+            //自定义扫描
+            MNScanConfig scanConfig = new MNScanConfig.Builder()
+                    //设置完成震动
+                    .isShowVibrate(false)
+                    //扫描完成声音
+                    .isShowBeep(true)
+                    //显示相册功能
+                    .isShowPhotoAlbum(false)
+                    //扫描线的颜色
+                    .setScanColor("#FFFF00")
+                    .builder();
+            MNScanManager.startScan(getActivity(), scanConfig,new MNScanCallback() {
+                @Override
+                public void onActivityResult(int resultCode, Intent data) {
+                    //TODO:
+                    switch (resultCode) {
+                        case MNScanManager.RESULT_SUCCESS:
+                            String resultSuccess = data.getStringExtra(MNScanManager.INTENT_KEY_RESULT_SUCCESS);
+                            ToastUtil.ShortToast(resultSuccess);
+                            break;
+                        case MNScanManager.RESULT_FAIL:
+                            String resultError = data.getStringExtra(MNScanManager.INTENT_KEY_RESULT_ERROR);
+                            ToastUtil.ShortToast(resultError);
+                            break;
+                        case MNScanManager.RESULT_CANCLE:
+                            ToastUtil.ShortToast("取消扫码");
+                            break;
+                    }
+                }
+            });
         }else if(v.getId() == R.id.img_message){
             ToastUtil.ShortToast("消息");
         }else if(v.getId() == R.id.tv_search){

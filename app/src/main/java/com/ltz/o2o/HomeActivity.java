@@ -16,6 +16,9 @@ import com.ltz.o2o.moudle.shopping_cart.Shop_CartFragment;
 import com.ltz.o2o.utils.SnackbarUtil;
 import com.ltz.o2o.widget.tab.BottomNavigationViewHelper;
 import com.ltz.o2o.widget.tab.NoScrollViewPager;
+
+import org.yapp.utils.permission.PermissionUtil;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -87,6 +90,14 @@ public class HomeActivity extends RxBaseActivity {
             }
         });
         setupViewPager(viewPager);
+
+
+        //权限动态申请，可以放到欢迎页当中
+        PermissionUtil
+                .with(this)
+                .permissions(
+                        PermissionUtil.PERMISSIONS_GROUP_CAMERA//相机权限
+                ).request();
     }
 
     private void setupViewPager(ViewPager viewPager) {

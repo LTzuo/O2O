@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+   <!-- <uses-permission android:name="android.permission.CAMERA"/>-->
+
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
@@ -21,7 +24,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".moudle.main.toolbar.SearchActivity"/>
+        <!-- 搜索 -->
+        <activity android:name=".moudle.main.toolbar.SearchActivity" />
+        <!-- 首页-优惠券 -->
+        <activity android:name=".moudle.main.content.MainCouponActivity" />
+        <!-- 首页-全球热卖 -->
+        <activity android:name=".moudle.main.content.global_hot_sale.GlobalHotSaleActivity" />
+        <!--首页-最新商品-->
+        <activity android:name=".moudle.main.content.latest_goods.LatestGoodsActivity"/>
 
         <!-- 分类-品牌榜 -->
         <activity android:name=".moudle.classification.rightRv.Ranking.brand.BrandRankActivity" />
@@ -71,9 +81,13 @@
         <!-- 注册 -->
         <activity android:name=".moudle.other.RegistActivity" />
         <!-- 绑定手机号 -->
-        <activity android:name=".moudle.other.bind_phonenumber.BindPhonenumberActivity"/>
+        <activity android:name=".moudle.other.bind_phonenumber.BindPhonenumberActivity" />
         <!-- 短信验证 -->
         <activity android:name=".moudle.other.bind_phonenumber.SmsVerificationActivity" />
+
+
+
+
 
     </application>
 
