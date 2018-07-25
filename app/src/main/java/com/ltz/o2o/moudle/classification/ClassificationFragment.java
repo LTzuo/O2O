@@ -15,6 +15,8 @@ import com.ltz.o2o.utils.ToastUtil;
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.Bind;
+import butterknife.OnClick;
+
 /**
  * 分类
  * Created by 1 on 2018/5/23.
@@ -28,6 +30,13 @@ public class ClassificationFragment extends RxLazyFragment {
 
     private LeftAdapter leftAdapter;
     private RightAdapter rightAdapter;
+
+    @OnClick({R.id.img_qr})
+    public void OnBtnClick(View v){
+        if(v.getId() == R.id.img_qr){
+            ToastUtil.ShortToast("扫一扫");
+        }
+    }
 
     private List<String> rightDatas = new ArrayList<>();
 
@@ -45,9 +54,9 @@ public class ClassificationFragment extends RxLazyFragment {
           initRecyclerView();
     }
 
+
     @Override
     protected void initRecyclerView() {
-        super.initRecyclerView();
         List<String> list = new ArrayList<>();
         for(int i = 0;i<getContext().getResources().getStringArray(R.array.classifition_commodity).length;i++){
             list.add(getContext().getResources().getStringArray(R.array.classifition_commodity)[i]);
@@ -97,10 +106,8 @@ public class ClassificationFragment extends RxLazyFragment {
         });
     }
 
-
     @Override
     protected void loadData() {
-        super.loadData();
         rightDatas.add("1段奶粉");
         rightDatas.add("2段奶粉");
         rightDatas.add("3段奶粉");

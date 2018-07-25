@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawablePadding="10dp"
-        android:drawableTop="@drawable/shangpin"
+        android:drawableTop="@drawable/test_shangpin1"
         android:gravity="center"
         android:text="pre段奶粉" />
 

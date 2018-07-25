@@ -6,6 +6,8 @@
 
     <color name="white">#FFFFFF</color><!--白色-->
 
+    <color name="gray_light">#dcdcdc</color>
+
     <color name="black">#000000</color>
 
     <color name="tab_checked">#FD6C00</color>
@@ -20,4 +22,6 @@
     <color name="color_grary">#BFBFBF</color>
 
     <color name="background">#F5F5F5</color>
+
+    <color name="img_default_bg">#f7f8fa</color>
 </resources>

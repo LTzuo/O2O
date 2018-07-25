@@ -11,6 +11,7 @@ import com.ltz.o2o.base.RxBaseActivity;
 import com.ltz.o2o.moudle.mine.coupon.CouponPagerAdapter;
 
 import butterknife.Bind;
+
 /**
  * 我的评价
  */

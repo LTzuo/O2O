@@ -14,7 +14,9 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.listener.OnBannerListener;
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.Bind;
+
 
 /**
  * 商品

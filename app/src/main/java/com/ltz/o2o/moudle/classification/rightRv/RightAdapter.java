@@ -13,7 +13,6 @@ import com.ltz.o2o.utils.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**

@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Toast;
+
+import com.alibaba.fastjson.JSONObject;
 import com.google.zxing.client.android.MNScanManager;
 import com.google.zxing.client.android.model.MNScanConfig;
 import com.google.zxing.client.android.other.MNScanCallback;
@@ -12,24 +15,29 @@ import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxLazyFragment;
 import com.ltz.o2o.moudle.main.content.ContentRecyclerAdapter;
 import com.ltz.o2o.moudle.main.toolbar.SearchActivity;
+import com.ltz.o2o.moudle.mine.message.MessageActivity;
+import com.ltz.o2o.utils.FastJsonUtils;
 import com.ltz.o2o.utils.IntentUtils;
 import com.ltz.o2o.utils.ToastUtil;
 import java.util.ArrayList;
 import java.util.List;
 import butterknife.Bind;
 import butterknife.OnClick;
+
 /**
  * 主页
  * Created by 1 on 2018/5/16.
  */
-public class MainFragment extends RxLazyFragment {
+public class MainFragment extends RxLazyFragment implements MainInteractor.IMainView{
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
 
     ContentRecyclerAdapter mContentRecyclerAdapter;
 
-    public List<String> images = new ArrayList<>();
+    MainPresenter mPresenter;
+
+    public List<BannerEntity> images = new ArrayList<>();
 
     @OnClick({R.id.img_saoyisao,R.id.img_message,R.id.tv_search})
     public void OnBtnClick(View v){
@@ -65,7 +73,7 @@ public class MainFragment extends RxLazyFragment {
                 }
             });
         }else if(v.getId() == R.id.img_message){
-            ToastUtil.ShortToast("消息");
+            IntentUtils.Goto(getActivity(), MessageActivity.class);
         }else if(v.getId() == R.id.tv_search){
             IntentUtils.Goto(getActivity(), SearchActivity.class);
         }
@@ -75,26 +83,39 @@ public class MainFragment extends RxLazyFragment {
         return new MainFragment();
     }
 
-    @Override
+        @Override
     public int getLayoutResId() {
         return R.layout.fragment_main;
     }
 
+
     @Override
     public void finishCreateView(Bundle state) {
-        images.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527141563&di=0148e7019e218f68a227533538fba5a5&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F017bc158d0fb95a801219c77d5d770.png%401280w_1l_2o_100sh.png");
-        images.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526546846658&di=617a5eed5d08cf05816e9543738bb5c4&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01741b593fad7da8012193a334ff89.jpg%402o.jpg");
-        images.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3709510195,1882973805&fm=27&gp=0.jpg");
-        images.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4233314911,1614228650&fm=27&gp=0.jpg");
+        mPresenter = new MainPresenter(this);
+//        images.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527141563&di=0148e7019e218f68a227533538fba5a5&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F017bc158d0fb95a801219c77d5d770.png%401280w_1l_2o_100sh.png");
+//        images.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526546846658&di=617a5eed5d08cf05816e9543738bb5c4&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01741b593fad7da8012193a334ff89.jpg%402o.jpg");
+//        images.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3709510195,1882973805&fm=27&gp=0.jpg");
+//        images.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4233314911,1614228650&fm=27&gp=0.jpg");
         initRecyclerView();
     }
 
+
     @Override
     protected void initRecyclerView() {
-        super.initRecyclerView();
-        mContentRecyclerAdapter = new ContentRecyclerAdapter(getContext(), images);
+        mContentRecyclerAdapter = new ContentRecyclerAdapter(getContext());
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter(mContentRecyclerAdapter);
+        mPresenter.getmainpagedata("hfgjudfkgkjnkjgndfjnkj");
+    }
+
+    @Override
+    public void Success(JSONObject json) {
+        mContentRecyclerAdapter.setInfo(FastJsonUtils.toList(json.getString("imgList"),BannerEntity.class),FastJsonUtils.toList(json.getString("dataList"),BottomEntity.class));
+    }
+
+    @Override
+    public void Fild(String msg) {
+        ToastUtil.ShortToast(msg);
     }
 
     @Override

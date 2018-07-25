@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.MenuItem;
 
+import com.ltz.o2o.app.AppManager;
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import butterknife.ButterKnife;
@@ -29,6 +30,8 @@ public abstract class RxBaseActivity extends RxAppCompatActivity {
         super.onCreate(savedInstanceState);
         //设置布局内容
         setContentView(getLayoutId());
+        //添加到栈中
+        AppManager.getInstance().addActivity(this);
         ButterKnife.bind(this);
         initViews(savedInstanceState);
         //初始化ToolBar
@@ -127,6 +130,8 @@ public abstract class RxBaseActivity extends RxAppCompatActivity {
         super.onDestroy();
         ButterKnife.unbind(this);
         unregisterReceiver(exitReceiver);
+        //从栈中移除
+        AppManager.getInstance().finishActivity(this);
     }
 
 

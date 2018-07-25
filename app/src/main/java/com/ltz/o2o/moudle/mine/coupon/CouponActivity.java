@@ -7,7 +7,9 @@ import android.widget.TextView;
 import com.flyco.tablayout.SlidingTabLayout;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
+
 import butterknife.Bind;
+
 
 /**
  * 我的-优惠券
@@ -47,4 +49,6 @@ public class CouponActivity extends RxBaseActivity {
         mToolbar.setTitleTextColor(getResources().getColor(R.color.white));
         mToolbar.setPopupTheme(R.style.ToolBarPopupThemeDay);
     }
+
+
 }

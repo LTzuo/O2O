@@ -3,12 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical"
     tools:context="com.ltz.o2o.moudle.other.RegistActivity">
 
 
     <TextView
+        android:id="@+id/tv_back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -29,6 +31,7 @@
 
 
     <EditText
+        android:id="@+id/edt_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -57,21 +60,35 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/et_VerificationCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
             android:hint="验证码"
-            android:maxLength="15"
+            android:maxLength="6"
+            android:inputType="number"
             android:padding="8dp"
             android:textSize="@dimen/_15dp" />
 
-        <TextView
+        <com.lucenlee.countdownlibrary.CountdownButton
+            android:id="@+id/mBtnCountDown"
+            app:startText="获取验证码"
+            app:endText="重新获取"
+            app:postfix="s"
+            app:countdown="60"
+            android:textAllCaps="false"
+            android:layout_height="match_parent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@drawable/corner_btn"
             android:text="获取验证码"
-            android:textColor="@color/textcolor_grary"
-            android:textSize="@dimen/_14dp" />
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginBottom="@dimen/_5dp"
+            android:paddingEnd="@dimen/_9dp"
+            android:paddingStart="@dimen/_9dp"/>
     </LinearLayout>
 
     <View
@@ -82,12 +99,15 @@
         android:background="@color/linecolor" />
 
     <EditText
+        android:id="@+id/et_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:background="@null"
+        android:inputType="textPassword"
+        android:maxLength="15"
         android:hint="密码"
         android:padding="8dp"
         android:textSize="@dimen/_15dp" />
@@ -100,12 +120,15 @@
         android:background="@color/linecolor" />
 
     <EditText
+        android:id="@+id/et_confirm_pwd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:background="@null"
+        android:inputType="textPassword"
+        android:maxLength="15"
         android:hint="确认密码"
         android:padding="8dp"
         android:textSize="@dimen/_15dp" />
@@ -119,6 +142,7 @@
 
 
     <TextView
+        android:id="@+id/tv_regist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -141,6 +165,7 @@
        android:layout_marginTop="15dp">
 
        <CheckBox
+           android:id="@+id/checkbox"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content" />
 

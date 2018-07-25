@@ -2,11 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ltz.o2o">
 
+    <!-- 用户权限设置 -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-   <!-- <uses-permission android:name="android.permission.CAMERA"/>-->
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 8.0安装需要的权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
 
     <application
         android:name=".app.App"
@@ -18,7 +26,7 @@
 
         <!-- 主页 -->
         <activity android:name=".HomeActivity">
-            <intent-filter>
+          <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -30,8 +38,8 @@
         <activity android:name=".moudle.main.content.MainCouponActivity" />
         <!-- 首页-全球热卖 -->
         <activity android:name=".moudle.main.content.global_hot_sale.GlobalHotSaleActivity" />
-        <!--首页-最新商品-->
-        <activity android:name=".moudle.main.content.latest_goods.LatestGoodsActivity"/>
+        <!-- 首页-最新商品 -->
+        <activity android:name=".moudle.main.content.latest_goods.LatestGoodsActivity" />
 
         <!-- 分类-品牌榜 -->
         <activity android:name=".moudle.classification.rightRv.Ranking.brand.BrandRankActivity" />
@@ -68,27 +76,18 @@
         /***************其他相关***************************************/
         <!-- 登录 -->
         <activity android:name=".moudle.other.LoginActivity">
-
-            <!--
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
+            </intent-filter>-->
         </activity>
-
         <!-- 注册 -->
         <activity android:name=".moudle.other.RegistActivity" />
         <!-- 绑定手机号 -->
         <activity android:name=".moudle.other.bind_phonenumber.BindPhonenumberActivity" />
         <!-- 短信验证 -->
         <activity android:name=".moudle.other.bind_phonenumber.SmsVerificationActivity" />
-
-
-
-
-
     </application>
 
 </manifest>

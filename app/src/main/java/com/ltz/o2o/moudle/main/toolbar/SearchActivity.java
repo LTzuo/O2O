@@ -15,6 +15,7 @@ import com.ltz.o2o.widget.flowlayout.FlowLayout;
 import org.litepal.crud.DataSupport;
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.yhq.dialog.core.DialogBuilder;
@@ -24,7 +25,7 @@ import cn.yhq.dialog.core.DialogBuilder;
  */
 public class SearchActivity extends RxBaseActivity {
 
-    @Bind({R.id.mFlowLayout})
+    @Bind(R.id.mFlowLayout)
     FlowLayout mFlowLayout;
     @Bind(R.id.edt)
     EditText edt;

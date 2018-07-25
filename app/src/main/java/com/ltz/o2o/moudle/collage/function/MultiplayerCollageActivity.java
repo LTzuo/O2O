@@ -14,7 +14,9 @@ import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.Bind;
+
 
 /**
  * 多人团

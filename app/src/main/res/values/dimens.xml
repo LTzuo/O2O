@@ -16,6 +16,8 @@
     <dimen name="tab_layout_small_height">40dp</dimen>
     <dimen name="tab_layout_default_height">48dp</dimen>
 
+
+    <dimen name="_5dp">5dp</dimen>
     <dimen name="_9dp">9dp</dimen>
     <dimen name="_10dp">10dp</dimen>
     <dimen name="_11dp">11dp</dimen>

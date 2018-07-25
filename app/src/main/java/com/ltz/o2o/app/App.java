@@ -4,6 +4,8 @@ import android.app.Application;
 import android.os.Handler;
 import android.os.Looper;
 
+import net.nashlegend.anypref.AnyPref;
+
 import org.litepal.LitePal;
 
 /**
@@ -21,6 +23,8 @@ public class App extends Application {
         mInstance = this;
         //初始化数据库
         LitePal.initialize(this);
+        //初始化SharedPreferences工具
+        AnyPref.init(this);
     }
 
 

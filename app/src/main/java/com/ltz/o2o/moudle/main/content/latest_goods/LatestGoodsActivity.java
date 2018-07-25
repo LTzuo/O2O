@@ -12,6 +12,7 @@ import com.ltz.o2o.moudle.main.content.global_hot_sale.GlobalHotSaleAdapter;
 
 import butterknife.Bind;
 
+
 /**
  * 首页-最新商品
  */

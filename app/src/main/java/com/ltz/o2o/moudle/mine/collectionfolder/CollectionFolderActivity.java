@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 

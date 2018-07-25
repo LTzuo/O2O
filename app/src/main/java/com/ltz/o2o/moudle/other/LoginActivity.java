@@ -13,9 +13,11 @@ import butterknife.OnClick;
  */
 public class LoginActivity extends RxBaseActivity {
 
-    @OnClick({R.id.tv_regist})
+    @OnClick({R.id.tv_back,R.id.tv_regist})
     public void OnBtnClick(View v){
-        if(v.getId() == R.id.tv_regist){
+        if(v.getId() == R.id.tv_back){
+            finish();
+        }else if(v.getId() == R.id.tv_regist){
             IntentUtils.Goto(this,RegistActivity.class);
         }
     }
