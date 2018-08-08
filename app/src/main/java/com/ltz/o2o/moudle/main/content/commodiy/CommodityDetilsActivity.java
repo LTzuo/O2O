@@ -270,7 +270,7 @@ public class CommodityDetilsActivity extends RxBaseActivity implements Commodity
                 int key = Integer.valueOf(entry.getKey());
                 String value = entry.getValue().toString();
                 for (int i = 0; i < mCommon.size(); i++) {
-                 //   if (key != i) {
+//                    if (key != i) {
                         if (mCommon.get(i).indexOf(value) != -1) {
                             commonList.add(mCommon.get(i));
                         }
