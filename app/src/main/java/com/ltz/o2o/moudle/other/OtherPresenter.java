@@ -77,7 +77,7 @@ public class OtherPresenter implements OtherInteractor.IOtherPresenter{
                         if(result == 0){
                             mView.Success(json);
                         }else{
-                            mView.Fild(json.getString("resultText"));
+                            mView.Fild(json.getString("resultTxt"));
                         }
                     }
                 });

@@ -19,14 +19,14 @@
     <application
         android:name=".app.App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <!-- 主页 -->
         <activity android:name=".HomeActivity">
-          <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -36,13 +36,18 @@
         <activity android:name=".moudle.main.toolbar.SearchActivity" />
         <!-- 首页-优惠券 -->
         <activity android:name=".moudle.main.content.MainCouponActivity" />
-        <!-- 首页-全球热卖 -->
-        <activity android:name=".moudle.main.content.global_hot_sale.GlobalHotSaleActivity" />
+        <!-- 首页-商品列表 -->
+        <activity android:name=".moudle.main.content.commodiy.CommodityListActivity" />
         <!-- 首页-最新商品 -->
         <activity android:name=".moudle.main.content.latest_goods.LatestGoodsActivity" />
+        <!-- 商品详情 -->
+        <activity android:name=".moudle.main.content.commodiy.CommodityDetilsActivity" />
 
+        /*************************************/
+        <!-- 分类-人气榜 -->
+        <activity android:name=".moudle.classification.rightRv.ranking.popularity.PopularityRankActivity"/>
         <!-- 分类-品牌榜 -->
-        <activity android:name=".moudle.classification.rightRv.Ranking.brand.BrandRankActivity" />
+        <activity android:name=".moudle.classification.rightRv.ranking.brand.BrandRankActivity" />
         /******************************************************/
         <!-- 拼团商城-多人团 -->
         <activity android:name=".moudle.collage.function.MultiplayerCollageActivity" />
@@ -76,11 +81,14 @@
         /***************其他相关***************************************/
         <!-- 登录 -->
         <activity android:name=".moudle.other.LoginActivity">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <!-- 注册 -->
         <activity android:name=".moudle.other.RegistActivity" />
@@ -88,6 +96,7 @@
         <activity android:name=".moudle.other.bind_phonenumber.BindPhonenumberActivity" />
         <!-- 短信验证 -->
         <activity android:name=".moudle.other.bind_phonenumber.SmsVerificationActivity" />
+
     </application>
 
 </manifest>

@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.alibaba.fastjson.JSONObject;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxLazyFragment;
 import com.ltz.o2o.moudle.collage.content.CollageCommodityDetilsActivity;
@@ -20,12 +22,14 @@ import butterknife.Bind;
  * 拼团
  * Created by 1 on 2018/5/23.
  */
-public class CollageFragment extends RxLazyFragment implements CollageContentRecyclerAdapter.OnKtBtnClickListener {
+public class CollageFragment extends RxLazyFragment implements CollageContentRecyclerAdapter.OnKtBtnClickListener ,CollageInteractor.ICollageView{
 
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
 
     private CollageContentRecyclerAdapter mAdapter;
+
+    private CollagePressenter mPressenter;
 
     public static CollageFragment newInstance() {
         return new CollageFragment();
@@ -40,9 +44,18 @@ public class CollageFragment extends RxLazyFragment implements CollageContentRec
 
     @Override
     public void finishCreateView(Bundle state) {
-        images.add("http://img4.imgtn.bdimg.com/it/u=1826733623,478687295&fm=27&gp=0.jpg");
-        images.add("http://img4.imgtn.bdimg.com/it/u=876135090,44534158&fm=27&gp=0.jpg");
+        mPressenter = new CollagePressenter(this);
+        isPrepared = true;
+        lazyLoad();
+    }
+
+    @Override
+    protected void lazyLoad() {
+        if (!isPrepared || !isVisible) {
+            return;
+        }
         initRecyclerView();
+        isPrepared = false;
     }
 
     @Override
@@ -56,10 +69,26 @@ public class CollageFragment extends RxLazyFragment implements CollageContentRec
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.setOnKtBtnClickListener(this);
         mAdapter.setInfo(images);
+        loadData();
     }
 
     @Override
     public void OnKtBtnClick(int index) {
         IntentUtils.Goto(getActivity(),CollageCommodityDetilsActivity.class);
+    }
+
+    @Override
+    protected void loadData() {
+        mPressenter.getCollagepagedata();
+    }
+
+    @Override
+    public void Success(JSONObject json) {
+
+    }
+
+    @Override
+    public void Fild(String msg) {
+        ToastUtil.ShortToast(msg);
     }
 }

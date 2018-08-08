@@ -2,7 +2,6 @@ package com.ltz.o2o.moudle.main.toolbar;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,6 @@ import com.ltz.o2o.widget.flowlayout.FlowLayout;
 import org.litepal.crud.DataSupport;
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.Bind;
 import butterknife.OnClick;
 import cn.yhq.dialog.core.DialogBuilder;

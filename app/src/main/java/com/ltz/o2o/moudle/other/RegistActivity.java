@@ -44,7 +44,6 @@ public class RegistActivity extends RxBaseActivity implements OtherInteractor.IO
     @OnClick({R.id.tv_back, R.id.mBtnCountDown, R.id.tv_regist})
     public void OnBtnClick(View v) {
         if (v.getId() == R.id.tv_back) {
-            AppManager.getInstance().finishActivity(AppManager.getInstance().getActivity(LoginActivity.class));
             finish();
         } else if (v.getId() == R.id.mBtnCountDown) {
             if (AppValidationMgr.checkPhoneNum(edt_username.getText().toString())) {
@@ -79,18 +78,18 @@ public class RegistActivity extends RxBaseActivity implements OtherInteractor.IO
 
     @Override
     public void Success(JSONObject json) {
-        mHandler.post(new Runnable() {
+        AnyPref.getDefault().putString(Constants.key_uSessionId , json.getString("uSessionId"));
+        AnyPref.getDefault().putString(Constants.key_userId , json.getString("userId"));
+        AnyPref.getDefault().putString(Constants.key_userHeadPic , json.getString("userHeadPic"));
+        AnyPref.getDefault().putString(Constants.key_userNickName , json.getString("userNickName"));
+        mHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                AnyPref.getDefault().putString(Constants.key_uSessionId , json.getString("uSessionId"));
-                AnyPref.getDefault().putString(Constants.key_userId , json.getString("userId"));
-                AnyPref.getDefault().putString(Constants.key_userHeadPic , json.getString("userHeadPic"));
-                AnyPref.getDefault().putString(Constants.key_userNickName , json.getString("userNickName"));
+                LodingDialogUtil.dissdialog();
+                AppManager.getInstance().finishActivity(AppManager.getInstance().getActivity(LoginActivity.class));
+                finish();
             }
-        });
-        LodingDialogUtil.dissdialog();
-        AppManager.getInstance().finishActivity(LoginActivity.class);
-        finish();
+        },1 * 1000);
     }
 
     @Override

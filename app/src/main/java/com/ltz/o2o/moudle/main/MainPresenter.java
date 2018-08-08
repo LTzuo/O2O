@@ -48,14 +48,13 @@ public class MainPresenter implements MainInteractor.IMainPresenter{
 
                     @Override
                     public void onNext(JSONArray jsonArray) {
-                        String jsonString = jsonArray.toString().substring(1,jsonArray.toString().length()-1);
-                        Log.i(Constants.LOG, jsonString);
-                        JSONObject json = JSONObject.parseObject(jsonString);
+                        JSONObject json =  jsonArray.getJSONObject(0);
+                        Log.i(Constants.LOG,json.toString());
                         boolean result = json.getBoolean("result");
                         if(result){
                             mView.Success(json);
                         }else{
-                            mView.Fild(json.getString("resultText"));
+                            mView.Fild(json.getString("resultTxt"));
                         }
                     }
                 });

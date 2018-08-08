@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
+import com.ltz.o2o.utils.ToastUtil;
 
 import butterknife.Bind;
 
@@ -28,7 +29,9 @@ public class MineCollageActivity extends RxBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
+        String data =  getIntent().getStringExtra("data");
 
+        ToastUtil.ShortToast(data);
     }
 
     @Override

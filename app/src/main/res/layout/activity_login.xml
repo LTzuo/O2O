@@ -30,6 +30,7 @@
 
 
     <EditText
+        android:id="@+id/edt_username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -58,11 +59,13 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/edt_pwd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
             android:hint="密码"
+            android:inputType="textPassword"
             android:maxLength="15"
             android:padding="8dp"
             android:textSize="@dimen/_15dp" />
@@ -84,6 +87,7 @@
 
 
     <TextView
+        android:id="@+id/tv_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"

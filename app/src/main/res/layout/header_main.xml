@@ -13,8 +13,71 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
+        android:paddingBottom="5dp"
         android:paddingTop="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="5dp">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_baoshui"
+                android:textColor="@color/textcolor_black"
+                android:gravity="center"
+                android:text="保税"
+                android:id="@+id/tv_baoshui" />
+
+            <TextView
+                android:id="@+id/tv_wanshui"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_ws"
+                android:textColor="@color/textcolor_black"
+                android:gravity="center"
+                android:text="完税" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_hwzy"
+                android:textColor="@color/textcolor_black"
+                android:gravity="center"
+                android:text="海外直邮"
+                android:id="@+id/tv_hwzy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_bszy"
+                android:textColor="@color/textcolor_black"
+                android:gravity="center"
+                android:text="保税直邮"
+                android:id="@+id/tv_bszy" />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_marginBottom="10dp">
 
         <TableRow
@@ -28,39 +91,43 @@
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:drawablePadding="10dp"
-                android:drawableTop="@drawable/qqrm_icon"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_qqrm"
+                android:textColor="@color/textcolor_black"
                 android:gravity="center"
                 android:text="全球热卖" />
 
             <TextView
-                android:id="@+id/tv_latest_goods"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:drawablePadding="10dp"
-                android:drawableTop="@drawable/zxsp_icon"
-                android:gravity="center"
-                android:text="最新商品" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:drawablePadding="10dp"
-                android:drawableTop="@drawable/xspt_icon"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_xspt"
+                android:textColor="@color/textcolor_black"
                 android:gravity="center"
                 android:text="限时拼团" />
 
             <TextView
-                android:id="@+id/tv_coupon"
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="1"
-                android:drawablePadding="10dp"
-                android:drawableTop="@drawable/yhj_icon"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_jkcl"
+                android:textColor="@color/textcolor_black"
                 android:gravity="center"
-                android:text="优惠券" />
+                android:text="进口车辆"
+                android:id="@+id/tv_jkcl" />
+
+            <TextView
+                android:id="@+id/tv_spsy"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/icon_main_spsy"
+                android:textColor="@color/textcolor_black"
+                android:gravity="center"
+                android:text="商品溯源" />
 
         </TableRow>
     </TableLayout>

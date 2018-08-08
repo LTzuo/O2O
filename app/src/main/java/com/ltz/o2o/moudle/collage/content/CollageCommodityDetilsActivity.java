@@ -6,13 +6,11 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.view.View;
-import android.widget.ImageView;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
 import com.ltz.o2o.imageloader.GlideImageLoader;
@@ -20,14 +18,12 @@ import com.ltz.o2o.moudle.collage.content.join_the_group.JointheGroupActivity;
 import com.ltz.o2o.utils.IntentUtils;
 import com.ltz.o2o.utils.ToastUtil;
 import com.ltz.o2o.widget.scrollview.IdeaScrollView;
-import com.ltz.o2o.widget.viewpager.IdeaViewPager;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 import com.youth.banner.listener.OnBannerListener;
-
 import java.util.ArrayList;
 import java.util.List;
-
+import butterknife.Bind;
 import butterknife.OnClick;
 import qiu.niorgai.StatusBarCompat;
 
@@ -45,8 +41,13 @@ public class CollageCommodityDetilsActivity extends RxBaseActivity {
     private float currentPercentage = 0;
     private boolean isNeedScrollTo = true;
 
+    @Bind(R.id.mWebView)
+    WebView mWebView;
+
     //拼团商品banner数据
     public List<String> images = new ArrayList<>();
+
+    private String htmlText = "<p><img class=\"desc_anchor img-ks-lazyload\" id=\"desc-module-1\" src=\"https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif\"/></p><p><img src=\"https://img.alicdn.com/imgextra/i4/3926716475/TB2pXxvq_dYBeNkSmLyXXXfnVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/></p><p><img class=\"desc_anchor img-ks-lazyload\" id=\"desc-module-2\" src=\"https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif\"/></p><p><img src=\"https://img.alicdn.com/imgextra/i3/3926716475/TB2STRAuxSYBuNjSsphXXbGvVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i3/3926716475/TB2L2efuER1BeNjy0FmXXb0wVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i3/3926716475/TB2gDtourSYBuNjSspiXXXNzpXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i2/3926716475/TB2qaF3ux1YBuNjy1zcXXbNcXXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i1/3926716475/TB2DnFJur1YBuNjSszeXXablFXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i4/3926716475/TB2CGIfl2iSBuNkSnhJXXbDcpXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i2/3926716475/TB2Vs3kl8yWBuNkSmFPXXXguVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i3/3926716475/TB2p_3ulZyYBuNkSnfoXXcWgVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i1/3926716475/TB2hq0Tuv9TBuNjy1zbXXXpepXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i4/3926716475/TB2GyeauxSYBuNjSspjXXX73VXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i4/3926716475/TB2BWl0ur1YBuNjSszhXXcUsFXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i3/3926716475/TB2jEoulZyYBuNkSnfoXXcWgVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i2/3926716475/TB2fNZzlZuYBuNkSmRyXXcA3pXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i1/3926716475/TB2g2WfuER1BeNjy0FmXXb0wVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i2/3926716475/TB2JZ_kl5CYBuNkHFCcXXcHtVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i1/3926716475/TB2znT2uDJYBeNjy1zeXXahzVXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/><img src=\"https://img.alicdn.com/imgextra/i4/3926716475/TB2xzopgYZnBKNjSZFGXXbt3FXa_!!3926716475.jpg\" class=\"img-ks-lazyload\"/></p><p><img class=\"desc_anchor img-ks-lazyload\" id=\"desc-module-3\" src=\"https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif\"/></p><p>.................</p><p><img class=\"desc_anchor img-ks-lazyload\" id=\"desc-module-4\" src=\"https://assets.alicdn.com/kissy/1.0.0/build/imglazyload/spaceball.gif\"/></p><p>...................</p>\n";
 
     @OnClick({R.id.img_back,R.id.tv_gotohome,R.id.tv_collection,R.id.tv_Join_thegroup})
     public void OnBtnClick(View v){
@@ -130,6 +131,28 @@ public class CollageCommodityDetilsActivity extends RxBaseActivity {
         images.add("http://img0.imgtn.bdimg.com/it/u=2775771461,3717659705&fm=27&gp=0.jpg");
         images.add("http://img4.imgtn.bdimg.com/it/u=2194726279,998310837&fm=27&gp=0.jpg");
         initBanners();
+
+//        new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                final Spanned text = Html.fromHtml(htmlText, new URLImageParser(html_text), null);
+//                mHandler.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        html_text.setText(text);
+//                    }
+//                });
+//            }
+//        }).start();
+
+        mWebView.getSettings().setJavaScriptEnabled(true);
+        mWebView.getSettings().setDefaultTextEncodingName("utf-8");
+        //自适应屏幕
+        mWebView.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        mWebView.getSettings().setLoadWithOverviewMode(true);
+        mWebView.loadDataWithBaseURL(null,htmlText, "text/html", "utf-8",null);
+
+
     }
 
     public void setRadioButtonTextColor(float percentage){

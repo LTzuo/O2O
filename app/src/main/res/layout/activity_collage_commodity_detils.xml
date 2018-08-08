@@ -331,7 +331,7 @@
             <LinearLayout
                 android:id="@+id/three"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:orientation="vertical">
 
                 <TextView
@@ -340,40 +340,10 @@
                     android:layout_gravity="center_horizontal"
                     android:text="------详情------" />
 
-                <ImageView
+                <WebView
+                    android:id="@+id/mWebView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/test_shangpin" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/test_shangpin" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/test_shangpin" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/test_shangpin" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/test_shangpin" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/test_shangpin" />
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/test_shangpin" />
+                    android:layout_height="fill_parent"/>
             </LinearLayout>
 
             <TextView

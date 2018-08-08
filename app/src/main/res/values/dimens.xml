@@ -17,6 +17,8 @@
     <dimen name="tab_layout_default_height">48dp</dimen>
 
 
+    <dimen name="_2dp">2dp</dimen>
+    <dimen name="_3dp">3dp</dimen>
     <dimen name="_5dp">5dp</dimen>
     <dimen name="_9dp">9dp</dimen>
     <dimen name="_10dp">10dp</dimen>

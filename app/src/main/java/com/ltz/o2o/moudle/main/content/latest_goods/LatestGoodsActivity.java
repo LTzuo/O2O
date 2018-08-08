@@ -8,10 +8,8 @@ import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxBaseActivity;
-import com.ltz.o2o.moudle.main.content.global_hot_sale.GlobalHotSaleAdapter;
-
+import com.ltz.o2o.moudle.main.content.commodiy.CommodityListAdapter;
 import butterknife.Bind;
-
 
 /**
  * 首页-最新商品
@@ -26,7 +24,7 @@ public class LatestGoodsActivity extends RxBaseActivity {
     @Bind(R.id.mRecyclerView)
     RecyclerView mRecyclerView;
 
-    private GlobalHotSaleAdapter mAdpater;
+    private CommodityListAdapter mAdpater;
 
     @Override
     public int getLayoutId() {
@@ -35,7 +33,7 @@ public class LatestGoodsActivity extends RxBaseActivity {
 
     @Override
     public void initViews(Bundle savedInstanceState) {
-        mAdpater = new GlobalHotSaleAdapter(mRecyclerView);
+        mAdpater = new CommodityListAdapter(mRecyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this,LinearLayoutManager.VERTICAL));
         mRecyclerView.setAdapter(mAdpater);

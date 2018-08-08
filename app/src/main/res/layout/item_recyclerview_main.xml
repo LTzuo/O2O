@@ -1,117 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="0.5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="5dp"
+    android:orientation="vertical"
     android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/layout_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <TextView
+        <ImageView
             android:id="@+id/item_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="热卖榜单"
-            android:textColor="@color/textcolor1"
-            android:gravity="center"
-            android:textSize="18dp" />
+            android:layout_height="40dp"
+             />
 
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/layout_title"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <include layout="@layout/item_recyclerview_main1"/>
 
-            <ImageView
-                android:id="@+id/img_top"
-                android:layout_width="fill_parent"
-                android:layout_height="120dp"
-                android:background="@color/img_default_bg"
-                />
+        <include layout="@layout/item_recyclerview_main2"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/img_top"
-                android:orientation="horizontal"
-                >
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:background="@color/img_default_bg" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="纪梵希纪梵希纪梵希..."
-                        android:textColor="@color/textcolor" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:background="@color/img_default_bg"  />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="纪梵希纪梵希纪梵希..."
-                        android:textColor="@color/textcolor" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical"
-                    android:padding="5dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="100dp"
-                        android:background="@color/img_default_bg"  />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="纪梵希纪梵希纪梵希..."
-                        android:textColor="@color/textcolor" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-        </RelativeLayout>
+        <include layout="@layout/item_recyclerview_main3"/>
 
     </FrameLayout>
 
-</RelativeLayout>
+</LinearLayout>

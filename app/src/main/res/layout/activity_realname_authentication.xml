@@ -40,12 +40,14 @@
                     android:textSize="@dimen/_16dp" />
 
                 <EditText
+                    android:id="@+id/edt_realname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:hint="请输入真实姓名"
+                    android:singleLine="true"
                     android:textColorHint="@color/textcolor_grary"
                     android:textSize="@dimen/_15dp" />
 
@@ -73,12 +75,16 @@
                     android:textSize="@dimen/_16dp" />
 
                 <EditText
+                    android:id="@+id/edt_no"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1"
                     android:background="@null"
                     android:hint="请输入身份证号"
+                    android:maxLength="18"
+                    android:singleLine="true"
+                    android:digits="0123456789qwertyuioplkjhgfdsazxcvbnm"
                     android:textColorHint="@color/textcolor_grary"
                     android:textSize="@dimen/_15dp" />
 
@@ -107,22 +113,58 @@
                           android:layout_width="fill_parent"
                           android:layout_height="fill_parent"
                           android:weightSum="2">
-                          <TextView
+                          <LinearLayout
                               android:layout_width="0dp"
                               android:layout_weight="1"
-                              android:text="身份证正面照"
-                              android:drawablePadding="5dp"
+                              android:orientation="vertical"
                               android:gravity="center_horizontal"
-                              android:drawableBottom="@drawable/addpicure"
-                              android:layout_height="wrap_content" />
-                          <TextView
+                              android:padding="5dp"
+                              >
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="身份证头像面"
+                                  />
+
+                              <ImageView
+                                  android:id="@+id/img_touxiang"
+                                  android:layout_width="fill_parent"
+                                  android:layout_height="100dp"
+                                  android:layout_marginTop="5dp"
+                                  android:visibility="gone"
+                                  android:src="@drawable/sfz_fm"/>
+
+                              <ImageView
+                                  android:id="@+id/img_add1"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:layout_marginTop="20dp"
+                                  android:src="@drawable/addpicure"/>
+
+                          </LinearLayout>
+
+                          <LinearLayout
                               android:layout_width="0dp"
                               android:layout_weight="1"
-                              android:text="示例照片"
-                              android:drawablePadding="5dp"
+                              android:orientation="vertical"
                               android:gravity="center_horizontal"
-                              android:drawableBottom="@drawable/addpicure"
-                              android:layout_height="wrap_content" />
+                              android:padding="5dp"
+                              >
+
+                              <TextView
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content"
+                                  android:text="示例图"/>
+
+                              <ImageView
+                                  android:layout_width="fill_parent"
+                                  android:layout_height="100dp"
+                                  android:layout_marginTop="5dp"
+                                  android:src="@drawable/sfe_zm"/>
+
+                          </LinearLayout>
+
                       </TableRow>
 
                 </TableLayout>
@@ -138,22 +180,80 @@
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:weightSum="2">
-                        <TextView
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="身份证反面照"
-                            android:drawablePadding="5dp"
+                            android:orientation="vertical"
                             android:gravity="center_horizontal"
-                            android:drawableBottom="@drawable/addpicure"
-                            android:layout_height="wrap_content" />
-                        <TextView
+                            android:padding="5dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="身份证国徽面"
+                                />
+
+                            <ImageView
+                                android:id="@+id/img_guohui"
+                                android:layout_width="fill_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="5dp"
+                                android:visibility="gone"
+                                android:src="@drawable/sfz_fm"/>
+
+                            <ImageView
+                                android:id="@+id/img_add2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/addpicure"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
                             android:layout_width="0dp"
                             android:layout_weight="1"
-                            android:text="示例照片"
-                            android:drawablePadding="5dp"
+                            android:orientation="vertical"
                             android:gravity="center_horizontal"
-                            android:drawableBottom="@drawable/addpicure"
-                            android:layout_height="wrap_content" />
+                            android:padding="5dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="示例图"
+                                />
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/sfz_fm"/>
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal"
+                            android:padding="5dp"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="示例图"
+                                 />
+
+                            <ImageView
+                                android:layout_width="fill_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/sfz_fm"/>
+
+                        </LinearLayout>
                     </TableRow>
 
                 </TableLayout>
@@ -170,6 +270,7 @@
 
 
     <TextView
+        android:id="@+id/tv_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

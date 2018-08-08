@@ -14,7 +14,7 @@ public class ApiConstants {
     /*******
      * 正式库地址
      ************/
-//   public static final String URL_BASE = "https://m.jcb178.com:9844/";
+//    public static final String URL_BASE = "http://222.168.19.245:8899/";
 
     public static final String TESTURL = "http://gank.io/api/";
 

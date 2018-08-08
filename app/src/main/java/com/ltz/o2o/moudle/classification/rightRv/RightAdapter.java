@@ -6,14 +6,17 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
 import com.ltz.o2o.R;
-import com.ltz.o2o.moudle.classification.rightRv.Ranking.brand.BrandRankActivity;
+import com.ltz.o2o.moudle.classification.entity.ClassCEntity;
+import com.ltz.o2o.moudle.classification.rightRv.ranking.brand.BrandRankActivity;
 import com.ltz.o2o.utils.ToastUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import butterknife.ButterKnife;
 
 /**
  * 右侧适配器
@@ -30,11 +33,15 @@ public class RightAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     private Context mContext;
 
-    private List<String> mDatas = new ArrayList<>();
+    private List<ClassCEntity> mDatas = new ArrayList<>();
 
-    public RightAdapter(Context context,List<String> data){
+    public RightAdapter(Context context){
         this.mContext = context;
+    }
+
+    public void setInfo(List<ClassCEntity> data){
         this.mDatas = data;
+         notifyDataSetChanged();
     }
 
     public int getContentSize(){
@@ -100,7 +107,14 @@ public class RightAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
         }else if(holder instanceof ContentHolder){ // 内容
             ContentHolder myHolder = (ContentHolder) holder;
-            myHolder.itemText.setText(mDatas.get(position - 1));
+            myHolder.itemText.setText(mDatas.get(position - 1).getClassName());
+
+            Glide.with(mContext)
+                .load(mDatas.get(position - 1).getClassPic())
+                .centerCrop()
+                .crossFade()
+                .into(myHolder.item_img);
+
         }else{ // 尾部
 
         }
@@ -125,9 +139,11 @@ public class RightAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     // 内容
     private class ContentHolder extends RecyclerView.ViewHolder{
         TextView itemText;
+        ImageView item_img;
         public ContentHolder(View itemView) {
             super(itemView);
             itemText = (TextView) itemView.findViewById(R.id.item_classify);
+            item_img = (ImageView) itemView.findViewById(R.id.item_img);
         }
     }
 

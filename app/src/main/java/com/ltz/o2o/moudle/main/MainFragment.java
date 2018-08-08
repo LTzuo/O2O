@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Toast;
-
 import com.alibaba.fastjson.JSONObject;
 import com.google.zxing.client.android.MNScanManager;
 import com.google.zxing.client.android.model.MNScanConfig;
@@ -14,6 +12,8 @@ import com.google.zxing.client.android.other.MNScanCallback;
 import com.ltz.o2o.R;
 import com.ltz.o2o.base.RxLazyFragment;
 import com.ltz.o2o.moudle.main.content.ContentRecyclerAdapter;
+import com.ltz.o2o.moudle.main.content.entity.BannerEntity;
+import com.ltz.o2o.moudle.main.content.entity.BottomEntity;
 import com.ltz.o2o.moudle.main.toolbar.SearchActivity;
 import com.ltz.o2o.moudle.mine.message.MessageActivity;
 import com.ltz.o2o.utils.FastJsonUtils;
@@ -92,20 +92,29 @@ public class MainFragment extends RxLazyFragment implements MainInteractor.IMain
     @Override
     public void finishCreateView(Bundle state) {
         mPresenter = new MainPresenter(this);
-//        images.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527141563&di=0148e7019e218f68a227533538fba5a5&imgtype=jpg&er=1&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F017bc158d0fb95a801219c77d5d770.png%401280w_1l_2o_100sh.png");
-//        images.add("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1526546846658&di=617a5eed5d08cf05816e9543738bb5c4&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01741b593fad7da8012193a334ff89.jpg%402o.jpg");
-//        images.add("https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3709510195,1882973805&fm=27&gp=0.jpg");
-//        images.add("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=4233314911,1614228650&fm=27&gp=0.jpg");
-        initRecyclerView();
+        isPrepared = true;
+        lazyLoad();
     }
-
+    @Override
+    protected void lazyLoad() {
+        if (!isPrepared || !isVisible) {
+            return;
+        }
+        initRecyclerView();
+        isPrepared = false;
+    }
 
     @Override
     protected void initRecyclerView() {
         mContentRecyclerAdapter = new ContentRecyclerAdapter(getContext());
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter(mContentRecyclerAdapter);
-        mPresenter.getmainpagedata("hfgjudfkgkjnkjgndfjnkj");
+        loadData();
+    }
+
+    @Override
+    protected void loadData() {
+        mPresenter.getmainpagedata("");
     }
 
     @Override

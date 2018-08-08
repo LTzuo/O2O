@@ -11,7 +11,7 @@ public class IntentUtils {
 
 
     /**
-     * 页面跳转
+     * 页面跳转（不带参数）
      * @param context
      * @param clzz
      */
@@ -19,4 +19,14 @@ public class IntentUtils {
         Intent intent = new Intent(context, clzz);
         context.startActivity(intent);
     }
+
+
+//    /**
+//     * 页面跳转（带参数）
+//     * @param mIntent
+//     */
+//    public static void GotoWithParams(Activity context,Intent mIntent){
+//        context.startActivity(mIntent);
+////    }
+
 }

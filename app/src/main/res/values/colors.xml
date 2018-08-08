@@ -3,6 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryBlack">#FF2B2B2B</color>
+
 
     <color name="white">#FFFFFF</color><!--白色-->
 
@@ -24,4 +26,10 @@
     <color name="background">#F5F5F5</color>
 
     <color name="img_default_bg">#f7f8fa</color>
+
+    <color name="color_ranklable0">#e12b07</color>
+    <color name="color_ranklable1">#fd6c00</color>
+    <color name="color_ranklable2">#fda700</color>
+
+    <color name="divider">#999</color>
 </resources>
